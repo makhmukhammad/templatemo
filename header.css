@@ -1,0 +1,110 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@900&display=swap');
+
+:root{
+    --font-color: #1e1e1e;
+    --orange:#f48840;
+    --font-family: 'Roboto', sans-serif;
+    --height:100px;
+} 
+
+*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: var(--height);
+    background-color: #f7f7f7;
+    padding: 15px 0px;
+    align-items: center;
+    margin: 0 auto;
+}
+.header_container{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 1140px;
+    padding: 10px 5px;
+}
+.stand{
+    font-size: 25px;
+padding-bottom: 20px;
+    font-family: var(--font-family);
+    color: var(--font-color);
+}
+.stand > span{
+    color:var(--orange);
+    height: 40px;
+    font-size: 45px;
+    font-family: var(--font-family);
+}
+.card{
+    width: 670px;   
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+padding-bottom: 10px;
+}
+li{
+    font-size: 18px;
+
+    font-family: var(--font-family);  
+    cursor: pointer;
+}
+a{
+    color: #1e1e1e;
+}
+a:link{
+
+    text-decoration: none;
+
+}
+li :active{
+    color: #f48840;
+}
+#hamberger{
+    padding: 4px 12px;
+    background-color:var(--orange);
+    cursor: pointer;
+    display: none;  
+} 
+#hamberger > svg{
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+
+@media (max-width:1000px) {
+    .header_container{
+        box-shadow: none;
+    }
+    .card{
+        width:var(--height);
+        top:var(--height);
+        left: 0;
+        display: none ;  
+        position: absolute;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        box-shadow: 0px 7px 9px -5px #8080804c;
+    }
+    .card>li{
+        border-bottom: 1px solid var(--font-color);
+        margin: 0 15px;
+        padding: 15px 0;
+    }
+    .card>li:last-child{
+        border-bottom:none;
+    }
+    #hamberger{
+        display: block;
+    }
+    .active-navbar{
+        display: flex;
+    }
+}
